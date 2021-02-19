@@ -39,6 +39,6 @@ def drop_columns(df, cols):
 
 def test_module_load():
     print("tja_modules is loaded\nVersion: {date_of_last_edit}")
-
+    print('test')
 
 
