@@ -1,3 +1,7 @@
+# A module providing simple functions that will simplfy 
+# the narative of my Google Colab notebooks.
+date_of_last_edit = '2021-02-19'
+
 def one_hot_encode(df, cols):
     import pandas as pd
     # Encode columns of categorical data
@@ -34,7 +38,7 @@ def drop_columns(df, cols):
   return df
 
 def test_module_load():
-    return("tja_modules is loaded")
+    return("tja_modules is loaded\nVersion: {date_of_last_edit}")
 
 
 
