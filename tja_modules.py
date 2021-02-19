@@ -1,5 +1,6 @@
 # A module providing simple functions that will simplfy 
 # the narative of my Google Colab notebooks.
+last_update = '2021-02-19'
 
 def one_hot_encode(df, cols):
     import pandas as pd
@@ -37,6 +38,6 @@ def drop_columns(df, cols):
   return df
 
 def test_module_load():
-    return("tja_modules is loaded")
+    print(f"tja_modules is loaded\nVersion: {last_update} ")
 
 
