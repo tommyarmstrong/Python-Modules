@@ -74,7 +74,6 @@ def bbc_form_summary(bbc_league_table):
             form_summary = form_summary + 'W'
         elif 'LLost' in i:
             form_summary = form_summary + 'L'    
-    print(f"Returned Form Summary")
     return(form_summary)
 
 def bbc_form_points(bbc_league_table):
@@ -93,7 +92,6 @@ def bbc_form_points(bbc_league_table):
             form_points = form_points + 1
         elif 'WWon' in i:
             form_points = form_points + 3
-    print(f"Returned Form Summary")
     return(form_points)
 
 
