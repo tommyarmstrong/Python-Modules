@@ -1,6 +1,6 @@
 # A module providing simple functions that will simplfy 
 # the narative of my Google Colab notebooks.
-last_update = '2021-02-19'
+last_update = '2022-03-02'
 
 def one_hot_encode(df, cols):
     import pandas as pd
@@ -51,7 +51,52 @@ def save_data_to_json_file(data, file_name):
     with open(file_name, 'w') as f:
             json.dump(data, f) 
 
-""" UK Government COVID Data Modules"""
+
+
+"""
+BBC Football Data Modules
+"""
+def bbc_form_summary(bbc_league_table):
+  '''
+  Accept a list of a team's recent form scraped 
+  from the 'Form' columns of footbal league tables 
+  on the BBC website. 
+  Return a summary of the recent form.
+  '''
+  form_list = bbc_league_table.split('.')
+  form_summary = ""
+  for i in form_list:
+    if 'DDrew' in i:
+      form_summary = form_summary + 'D'
+    elif 'WWon' in i:
+      form_summary = form_summary + 'W'
+    elif 'LLost' in i:
+      form_summary = form_summary + 'L'
+  return(form_summary)
+
+def bbc_form_points(bbc_league_table):
+  '''
+  Accept a list of a team's recent form scraped 
+  from the 'Form' columns of footbal league tables 
+  on the BBC website. 
+  Return a the number of points earned from the 
+  recent form.
+  '''
+  form_list = bbc_league_table.split('.')
+  #  form_list = bbc_league_table.loc[0].split('.')
+  form_points = 0
+  for i in form_list:
+    if 'DDrew' in i:
+      form_points = form_points + 1
+    elif 'WWon' in i:
+      form_points = form_points + 3
+  return(form_points)
+
+
+
+""" 
+UK Government COVID Data Modules
+"""
 
 def load_data(metrics, area_type):
     """Load data either from online source or locally cached JSON"""
