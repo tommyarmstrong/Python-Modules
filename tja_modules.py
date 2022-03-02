@@ -56,41 +56,45 @@ def save_data_to_json_file(data, file_name):
 """
 BBC Football Data Modules
 """
+
+
 def bbc_form_summary(bbc_league_table):
-  '''
-  Accept a list of a team's recent form scraped 
-  from the 'Form' columns of footbal league tables 
-  on the BBC website. 
-  Return a summary of the recent form.
-  '''
-  form_list = bbc_league_table.split('.')
-  form_summary = ""
-  for i in form_list:
-    if 'DDrew' in i:
-      form_summary = form_summary + 'D'
-    elif 'WWon' in i:
-      form_summary = form_summary + 'W'
-    elif 'LLost' in i:
-      form_summary = form_summary + 'L'
-  return(form_summary)
+    '''
+    Accept a list of a team's recent form scraped 
+    from the 'Form' columns of footbal league tables 
+    on the BBC website. 
+      Return a summary of the recent form.
+    '''
+    form_list = bbc_league_table.split('.')
+    form_summary = ""
+    for i in form_list:
+        if 'DDrew' in i:
+            form_summary = form_summary + 'D'
+        elif 'WWon' in i:
+            form_summary = form_summary + 'W'
+        elif 'LLost' in i:
+            form_summary = form_summary + 'L'    
+    print(f"Returned Form Summary")
+    return(form_summary)
 
 def bbc_form_points(bbc_league_table):
-  '''
-  Accept a list of a team's recent form scraped 
-  from the 'Form' columns of footbal league tables 
-  on the BBC website. 
-  Return a the number of points earned from the 
-  recent form.
-  '''
-  form_list = bbc_league_table.split('.')
-  #  form_list = bbc_league_table.loc[0].split('.')
-  form_points = 0
-  for i in form_list:
-    if 'DDrew' in i:
-      form_points = form_points + 1
-    elif 'WWon' in i:
-      form_points = form_points + 3
-  return(form_points)
+    '''
+    Accept a list of a team's recent form scraped 
+    from the 'Form' columns of footbal league tables 
+    on the BBC website. 
+    Return a the number of points earned from the 
+    recent form.
+    '''
+    form_list = bbc_league_table.split('.')
+    #  form_list = bbc_league_table.loc[0].split('.')
+    form_points = 0
+    for i in form_list:
+        if 'DDrew' in i:
+            form_points = form_points + 1
+        elif 'WWon' in i:
+            form_points = form_points + 3
+    print(f"Returned Form Summary")
+    return(form_points)
 
 
 
