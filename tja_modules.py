@@ -64,6 +64,7 @@ def pickle_to_google_drive(df, pickle_file_name):
 
 def load_pickle_from_google_drive(pickle_file_name):
     """Load pickle in Google Drive to Pandas DF or return False"""
+    import pandas as pd
     from pathlib import Path
     from google.colab import drive
 
