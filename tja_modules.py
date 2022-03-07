@@ -1,6 +1,6 @@
 # A module providing simple functions that will simplfy 
 # the narative of my Google Colab notebooks.
-last_update = '2022-03-07'
+last_update = '2022-03-07 version 3'
 
 def one_hot_encode(df, cols):
     import pandas as pd
