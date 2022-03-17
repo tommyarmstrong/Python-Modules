@@ -55,7 +55,7 @@ def pickle_to_google_drive(df, pickle_file_name):
     """Pickle a DataFrame to Google Drive"""
     from google.colab import drive
 
-    drive.mount('/content/drive')
+    drive.mount('/content/drive', force_remount=True)
     pickle_path = '/content/drive/MyDrive/Data Sets'
     pickle_path = pickle_path + '/' + pickle_file_name
     df.to_pickle(pickle_path)
@@ -68,7 +68,7 @@ def load_pickle_from_google_drive(pickle_file_name):
     from pathlib import Path
     from google.colab import drive
 
-    drive.mount('/content/drive')
+    drive.mount('/content/drive', force_remount=True)
     pickle_path = '/content/drive/MyDrive/Data Sets'
     pickle_path = pickle_path + '/' + pickle_file_name
 
