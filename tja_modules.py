@@ -1,6 +1,6 @@
 # A module providing simple functions that will simplfy 
 # the narative of my Google Colab notebooks.
-last_update = '2022-03-07 version 4'
+last_update = '2022-03-23 version 1'
 
 def one_hot_encode(df, cols):
     import pandas as pd
@@ -77,7 +77,7 @@ def load_pickle_from_google_drive(pickle_file_name):
       df = pd.read_pickle(pickle_path)
       return(df)
     else:
-      print(f"Data DOES NOT exist in Google Drive.\nReturning: False")
+      print(f"Data DOES NOT exist in Google Drive.")
       return(False)
 
 
